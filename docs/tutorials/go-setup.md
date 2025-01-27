@@ -105,6 +105,61 @@ Before completing this tutorial make sure you have:
 
 Congratulations! You have created your first go dev container.
 
+## Creating a Go Basic Program
+
+Step 1. Create a "Hello COMP423" Program
+
+(A) Initialize a Go Module. A go.mod file lists all external dependencies your project requires, along with their specific versions to ensure your project always uses the same version of each dependency. It will also declare your project as a Go module and assigns it a unique module path. This path acts as the module’s unique identifier, enabling other Go projects to reference your code when used as a dependency.
+
+``` bash
+  go mod init example.com/go-project
+```
+It should say ```go: creating new go.mod: module example.com/go-project`` after the command executes
+
+make an admonition saying a go.mod file is like a requirements.txt file in python
+
+(B) Create a .go file:
+  1. In the Explorer tab, right-click on the folder and select New File
+  2. Name the file hello-comp423.go
+
+(C) Add the following code to print hello comp 423
+
+``` go
+  package main
+
+  import "fmt"
+
+  func main() {
+    fmt.Println("Hello COMP423")
+  }
+```
+(D) Save your changes (Ctrl + S or Cmd + S on Mac)
+
+Step 2: Run the Program 
+Can run your file two different ways. 
+1.  In the terminal of VS Code write
+
+``` bash
+  go run hello-comp423.go
+```
+  When it executes it will print "Hello COMP423" in your terminal
+2. 
+  (A) In your VS Code terminal write this command. It will create a executable binary file called hello-comp423.
+    ``` bash
+      go build -o hello-comp423 hello-comp423.go
+    ```
+  (B) Run the binary file.
+    ``` bash
+      ./hello-comp423
+    ```
+  This should give you the same output as before: "Hello COMP423"
+  
+  admonition
+  The go build command compiles the source code and generates an executable binary file. This is similar to how the gcc (GNU Compiler Collection) command compiles C code into a binary in a typical C program. This is ideal when you want to distribute the program as an executable. The go run command compiles and runs the Go code in a single step. It doesn't produce a binary file. Instead, it compiles the source code in memory and immediately executes it. This is ideal for quick tests or development when you don't need the compiled binary file. 
+
+You have now built and run your first Go program!
 
 * Primary author: [Krisha Avula](https://github.com/krisha188)
 * Reviewer: [Kevin Ma](https://github.com/Kevinofma)
+
+This tutorial uses information from [Starting a Static Website Project with MkDocs by Kris Jordan](https://comp423-25s.github.io/resources/MkDocs/tutorial/)
