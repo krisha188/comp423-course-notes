@@ -61,7 +61,7 @@ Before completing this tutorial make sure you have:
 
 ### Step 2: Setting up the Development Environment
 
-1.  In VS Code, open the rust-project directory via: File > Open Folder
+1.  In VS Code, open the go-project directory via: File > Open Folder
 
 2.  Install the Dev Containers and Docker Extension for VS Code
 
@@ -76,9 +76,9 @@ Before completing this tutorial make sure you have:
 
     * Name: a descriptive name for your dev container
 
-    * Image: the Docker image to use, in this case, the latest version of a Rust environment. Microsoft maintains a collection of base images for many programming language       environments, but you can also create your own!
+    * Image: the Docker image to use, in this case, the latest version of a Go environment. Microsoft maintains a collection of base images for many programming language       environments, but you can also create your own!
 
-    * Customizations: adds useful configurations to VS Code, Here we are using the rust-analyzer VSCode plugin by the Rust Programming Language Group
+    * Customizations: adds useful configurations to VS Code, Here we are using the Go VSCode plugin
 
   ``` JSON
   {
@@ -109,7 +109,7 @@ Congratulations! You have created your first go dev container.
 
 ## Creating a Go Basic Program
 
-Step 1. Create a "Hello COMP423" Program
+### Step 1. Create a "Hello COMP423" Program
 
 (A) Initialize a Go Module. A go.mod file lists all external dependencies your project requires, along with their specific versions to ensure your project always uses the same version of each dependency. It will also declare your project as a Go module and assigns it a unique module path. This path acts as the module’s unique identifier, enabling other Go projects to reference your code when used as a dependency.
 
@@ -118,7 +118,8 @@ Step 1. Create a "Hello COMP423" Program
 ```
 It should say ```go: creating new go.mod: module example.com/go-project`` after the command executes
 
-make an admonition saying a go.mod file is like a requirements.txt file in python
+!!! note
+    the go.mod file is similar to the requirements.txt file found in python
 
 (B) Create a .go file:
   1. In the Explorer tab, right-click on the folder and select New File
@@ -137,7 +138,7 @@ make an admonition saying a go.mod file is like a requirements.txt file in pytho
 ```
 (D) Save your changes (Ctrl + S or Cmd + S on Mac)
 
-Step 2: Run the Program 
+### Step 2: Run the Program 
 Can run your file two different ways. 
 1.  In the terminal of VS Code write
 
@@ -150,14 +151,15 @@ Can run your file two different ways.
     ``` bash
       go build -o hello-comp423 hello-comp423.go
     ```
+
   (B) Run the binary file.
     ``` bash
       ./hello-comp423
     ```
   This should give you the same output as before: "Hello COMP423"
-  
-  admonition
-  The go build command compiles the source code and generates an executable binary file. This is similar to how the gcc (GNU Compiler Collection) command compiles C code into a binary in a typical C program. This is ideal when you want to distribute the program as an executable. The go run command compiles and runs the Go code in a single step. It doesn't produce a binary file. Instead, it compiles the source code in memory and immediately executes it. This is ideal for quick tests or development when you don't need the compiled binary file. 
+
+!!! note "go build"
+    The go build command compiles the source code and generates an executable binary file. This is similar to how the gcc (GNU Compiler Collection) command compiles C code into a binary in a typical C program. This is ideal when you want to distribute the program as an executable. The go run command compiles and runs the Go code in a single step. It doesn't produce a binary file. Instead, it compiles the source code in memory and immediately executes it. This is ideal for quick tests or development when you don't need the compiled binary file. 
 
 You have now built and run your first Go program!
 
