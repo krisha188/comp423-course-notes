@@ -1,5 +1,7 @@
 #  Go Tutorial :fontawesome-brands-golang:
 
+Go, also known as Golang, is an open-source programming language created by Google in 2007 and released in 2009. It was designed with simplicity, performance, and ease of development in mind. Go combines the efficiency of compiled languages like C with the simplicity and readability of interpreted languages like Python, making it ideal for building scalable, high-performance applications. In this tutorial, we will guide you through setting up a development environment for Go using a Dev Container and build and run your first Go program within it. 
+
 ## Prerequisites
 Before completing this tutorial make sure you have:
 
